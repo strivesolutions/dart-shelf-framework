@@ -1,5 +1,5 @@
-import 'package:dart_shelf_framework/dart_shelf_framework.dart';
 import 'package:dart_shelf_framework/src/api/mixins/api_error_mixin.dart';
+import 'package:dart_shelf_framework/src/api/type_definitions.dart';
 
 /// Used to return errors to the client
 /// [message] is a user friendly, external facing message
