@@ -13,7 +13,7 @@ jobs:
       - name: Get Changed Workflow Files
         id: files
         run: |
-          echo "{modified}={$(git diff --name-only --diff-filter=M origin/${{ github.event.pull_request.base.ref }}..origin/${{ github.event.pull_request.head.ref }} -- .github/workflows/ | wc -l)}" >> $GITHUB_OUTPUT
+          echo "{modified}={$(git diff --name-only --diff-filter=M ${{ github.event.pull_request.base.ref }}..${{ github.event.pull_request.head.ref }} -- .github/workflows/ | wc -l)}" >> $GITHUB_OUTPUT
           echo "{added}={$(git diff --name-only --diff-filter=A origin/${{ github.event.pull_request.base.ref }}..origin/${{ github.event.pull_request.head.ref }} -- .github/workflows/ | wc -l)}" >> $GITHUB_OUTPUT
       - name: label PR
         if: steps.files.outputs.modified != 0 || steps.files.outputs.added != 0
