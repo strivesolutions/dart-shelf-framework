@@ -1,6 +1,6 @@
 # Dart Shelf Framework
 
-## Requirements
+## Development Requirements
 
 1. Dart SDK >= 3.0.0
    1. [Install Dart](https://dart.dev/get-dart)
@@ -26,6 +26,18 @@
 4. Provides a simple and intuitive way to define middleware.
 5. Provides a simple and intuitive way to define error handlers.
 6. Provides a fluent API for building and starting the server.
+
+## Getting Started
+
+To use this package in your project, in your `pubspec.yaml` file, add the following dependency:
+
+```yaml
+dependencies:
+  dart-shelf-framework:
+    git:
+      url: https://github.com/strivesolutions/dart-shelf-framework.git
+      ref: main
+```
 
 ## Usage
 
