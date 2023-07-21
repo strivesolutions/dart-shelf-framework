@@ -1,6 +1,6 @@
 name: dart_shelf_framework
 description: Everything you need to build a web server with Dart.
-version: 1.0.0
+version: 0.1.0
 repository: https://github.com/strivesolutions/dart-shelf-framework
 
 environment:
