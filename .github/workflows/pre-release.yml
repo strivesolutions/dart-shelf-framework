@@ -1,12 +1,11 @@
 name: Prepare release
 
 on:
-  pull_request:
-#   push:
-#     branches:
-#       - main
-#     paths:
-#       - "pubspec.yaml"
+  push:
+    branches:
+      - main
+    paths:
+      - "pubspec.yaml"
 
 jobs:
   cancel-previous:
