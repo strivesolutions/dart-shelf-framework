@@ -1,0 +1,27 @@
+name: Set CI Change Label when Workflow Changes
+
+on:
+  pull_request:
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get Changed Workflow Files
+        id: files
+        run: |
+          echo "{name}={modified}" >> $(git diff --name-only --diff-filter=M origin/${{ github.base_ref }}..${{ github.head_ref }} | grep '^.github/workflows/' | wc -l)
+          echo "{name}={added}" >> $(git diff --name-only --diff-filter=A origin/${{ github.base_ref }}..${{ github.head_ref }} | grep '^.github/workflows/' | wc -l)
+      - name: label PR
+        if: steps.files.outputs.modified != 0 || steps.files.outputs.added != 0
+        run: |
+          curl --request POST \
+          --url https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/labels \
+          --header 'Authorization: Bearer ${{ github.token }}' \
+          --header 'Content-Type: application/json' \
+          --data '{
+            "labels": ["CI Change"]
+          }'
