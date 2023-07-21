@@ -1,5 +1,22 @@
 # Dart Shelf Framework
 
+## Requirements
+
+1. Dart SDK >= 3.0.0
+   1. [Install Dart](https://dart.dev/get-dart)
+2. VS Code >= 1.44.0
+   1. [Install VS Code](https://code.visualstudio.com/download)
+   2. Install the Dart VS Code extension
+      1. Open VS Code
+      2. Click the Extensions icon in the Activity Bar
+      3. Search for Dart
+      4. Click Install
+   3. Install the dart-import extension
+      1. Open VS Code
+      2. Click the Extensions icon in the Activity Bar
+      3. Search for dart-import
+      4. Click Install
+
 ## Features
 
 1. Opinionated framework for building web server applications using Dart.
@@ -10,18 +27,10 @@
 5. Provides a simple and intuitive way to define error handlers.
 6. Provides a fluent API for building and starting the server.
 
-## Getting started
-
 ## Usage
 
 See the [example](example) directory for a complete sample app using the Dart Shelf Framework.
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
-
 ## Contributing
 
-If you wish to contribute a change to this repo, please review our [contribution guide](
+If you wish to contribute a change to this repo, please review our [contribution guide](CONTRIBUTING.md).
