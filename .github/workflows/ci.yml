@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  pull_request:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  cancel-previous:
+    name: Cancel previous runs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+
+  package:
+    name: Validate package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+
+      - run: dart pub get
+      - run: dart format --output=none --set-exit-if-changed .
+      - run: dart analyze
+      - run: dart test
+
+  docs:
+    name: Validate docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+
+      - run: dart pub get
+      - run: dart doc .
+
+  examples:
+    name: Validate examples
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: example
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+
+      - run: dart pub get
+      - run: dart format --output=none --set-exit-if-changed .
+      - run: dart analyze

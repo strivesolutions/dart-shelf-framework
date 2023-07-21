@@ -1,0 +1,23 @@
+name: Set CI Change Label when Workflow Changes
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/**.yml
+      - .github/workflows/**.yaml
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: label PR
+        run: |
+          curl --request POST \
+          --url https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/labels \
+          --header 'Authorization: Bearer ${{ github.token }}' \
+          --header 'Content-Type: application/json' \
+          --data '{
+            "labels": ["CI Change"]
+          }'

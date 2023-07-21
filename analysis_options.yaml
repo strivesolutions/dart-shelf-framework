@@ -1,0 +1,44 @@
+include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    await_only_futures: true
+    always_declare_return_types: true
+    avoid_empty_else: true
+    always_put_control_body_on_new_line: true
+    avoid_relative_lib_imports: true
+    curly_braces_in_flow_control_structures: true
+
+analyzer:
+  errors:
+    abstract_sealed_class: error
+    missing_return: error
+    dead_code: error
+    unused_local_variable: error
+    unused_import: error
+    unused_element: error
+    unused_field: error
+    avoid_relative_lib_imports: error
+    throw_in_finally: error
+    always_declare_return_types: error
+    always_put_control_body_on_new_line: error
+    body_might_complete_normally: error
+    body_might_complete_normally_nullable: error
+    class_used_as_mixin: error
+    dead_code_catch_following_catch: error
+    dead_code_on_catch_subtype: error
+    dead_null_aware_expression: error
+    default_value_on_required_parameter: error
+    definitely_unassigned_late_local_variable: error
+    division_optimization: error
+    duplicate_import: error
+    final_not_initialized_constructor: error
+    final_not_initialized: error
+
+  exclude:
+    - "test/**"
+
+  language:
+    strict-casts: false
+    strict-inference: true
+    strict-raw-types: true
