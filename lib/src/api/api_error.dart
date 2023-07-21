@@ -1,5 +1,11 @@
+import 'package:dart_shelf_framework/dart_shelf_framework.dart';
 import 'package:dart_shelf_framework/src/api/mixins/api_error_mixin.dart';
 
+/// Used to return errors to the client
+/// [message] is a user friendly, external facing message
+/// [path] is the path of the request
+/// [statusCode] is the status code of the response
+/// [detail] is the detail of the error for internal use
 class ApiError with ApiErrorMixin {
   /// User Friendly message
   @override
@@ -24,7 +30,8 @@ class ApiError with ApiErrorMixin {
     required this.detail,
   });
 
-  factory ApiError.fromJson(Map<String, dynamic> json) {
+  /// Converts [Json] to an [ApiError]
+  factory ApiError.fromJson(Json json) {
     return ApiError(
       message: json['message'],
       path: json['path'],

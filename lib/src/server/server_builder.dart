@@ -5,6 +5,7 @@ import 'package:dart_shelf_framework/src/server/type_definitions.dart';
 import 'package:shelf/shelf.dart' as shelf;
 import 'package:shelf/shelf_io.dart';
 
+/// Fluent API for building a server.
 final class ServerBuilder {
   final int port;
   final InternetAddress address;
@@ -76,8 +77,7 @@ final class ServerBuilder {
     return server;
   }
 
-  shelf.Pipeline _configurePipelineMiddleware(
-      List<Middleware> middlewares, Logger? logger) {
+  shelf.Pipeline _configurePipelineMiddleware(List<Middleware> middlewares, Logger? logger) {
     final pipeline = shelf.Pipeline();
 
     for (final middleware in middlewares) {

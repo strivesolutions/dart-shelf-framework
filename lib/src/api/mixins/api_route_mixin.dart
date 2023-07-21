@@ -7,6 +7,7 @@ import 'package:shelf/shelf.dart';
 
 import '../http_method.dart';
 
+/// Mixin for [ApiRoute]
 mixin ApiRouteMixin {
   /// HTTP Verb
   HttpMethod get verb;
@@ -22,8 +23,7 @@ mixin ApiRouteMixin {
   /// and the [Content-Type] header set to [application/json]
   /// with a status code of [200 OK]
   Response ok(ApiResponseMixin response) =>
-      Response.ok(jsonEncode(response.toJson()),
-          headers: {'Content-Type': 'application/json'});
+      Response.ok(jsonEncode(response.toJson()), headers: {'Content-Type': 'application/json'});
 
   /// Returns a [Response] with the [ApiResponseMixin] as body
   /// and the [Content-Type] header set to [application/json]
