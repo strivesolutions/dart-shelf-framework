@@ -1,6 +1,6 @@
-/// Support for doing something awesome.
+/// Dart Shelf Framework
 ///
-/// More dartdocs go here.
+/// A framework for building REST APIs using Dart and Shelf.
 library;
 
 export 'src/api/api_response.dart';
