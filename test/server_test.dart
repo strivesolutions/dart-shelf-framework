@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:dart_shelf_framework/src/server/cors_config.dart';
-import 'package:dart_shelf_framework/src/server/server.dart';
+import 'package:dart_shelf_framework/src/server/server_builder.dart';
 import 'package:shelf/shelf.dart';
 import 'package:test/test.dart';
 

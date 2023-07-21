@@ -13,7 +13,7 @@ mixin ApiRouteMixin {
 
   /// Path of the route
   /// If [prefix] is provided, it will be added to the path
-  String getPath({String? prefix});
+  String getPath({String prefix = ''});
 
   /// Handler of the route
   Future<Response> handler(Request request);
