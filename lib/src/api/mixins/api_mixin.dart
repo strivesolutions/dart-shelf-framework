@@ -1,6 +1,6 @@
 import 'api_route_mixin.dart';
 
-/// Mixin for [Api]
+/// Mixin for Api
 mixin ApiMixin {
   /// Prefix for all routes
   String get prefix;
