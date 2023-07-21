@@ -1,11 +1,12 @@
 name: Prepare release
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "pubspec.yaml"
+  pull_request:
+#   push:
+#     branches:
+#       - main
+#     paths:
+#       - "pubspec.yaml"
 
 jobs:
   cancel-previous:
@@ -36,7 +37,7 @@ jobs:
         run: |
           NEW_VERSION="$(./versionChangeCheck.sh)"
           echo "New version if changed = '$NEW_VERSION'"
-          "echo {newVersion}={$NEW_VERSION}" >> $GITHUB_OUTPUT
+          echo {newVersion}={$NEW_VERSION} >> $GITHUB_OUTPUT
 
   create-release:
     name: Create draft release
