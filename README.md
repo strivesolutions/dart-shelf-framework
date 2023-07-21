@@ -1,6 +1,6 @@
 # Dart Shelf Framework
 
-![CI Status](https://github.com/strivesolutions/dart-shelf-framework/.github/workflows/ci.yml/badge.svg)
+![CI Status](https://github.com/strivesolutions/dart-shelf-framework/actions/workflows/ci.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 [API Documentation](https://strivesolutions.github.io/dart-shelf-framework/)
