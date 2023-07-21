@@ -16,10 +16,12 @@ void main() {
   });
 
   group('ApiError Serialization Tests', () {
-    final error = ApiError(detail: 'detail', message: 'message', path: 'path', statusCode: 400);
+    final error = ApiError(
+        detail: 'detail', message: 'message', path: 'path', statusCode: 400);
 
     test('Json contains message, path, statusCode and detail', () {
-      expect(error.toJson().keys, containsAll(['message', 'path', 'status_code', 'detail']));
+      expect(error.toJson().keys,
+          containsAll(['message', 'path', 'status_code', 'detail']));
     });
 
     test('Json contains exactly four keys', () {

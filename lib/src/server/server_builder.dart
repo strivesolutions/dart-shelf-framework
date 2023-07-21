@@ -76,7 +76,8 @@ final class ServerBuilder {
     return server;
   }
 
-  shelf.Pipeline _configurePipelineMiddleware(List<Middleware> middlewares, Logger? logger) {
+  shelf.Pipeline _configurePipelineMiddleware(
+      List<Middleware> middlewares, Logger? logger) {
     final pipeline = shelf.Pipeline();
 
     for (final middleware in middlewares) {

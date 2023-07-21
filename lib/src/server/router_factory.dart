@@ -7,7 +7,8 @@ abstract final class RouterFactory {
 
     for (final api in apis) {
       for (final route in api.routes) {
-        router.add(route.verb.value, '$apiPrefix${route.getPath(prefix: api.prefix)}', route.handler);
+        router.add(route.verb.value,
+            '$apiPrefix${route.getPath(prefix: api.prefix)}', route.handler);
       }
     }
     return router;

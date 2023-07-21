@@ -17,14 +17,16 @@ void main() {
     });
 
     test('Calling addMiddleware adds Middleware to collection', () {
-      FutureOr<Response> Function(Request) middleware(handler) => (request) => handler(request);
+      FutureOr<Response> Function(Request) middleware(handler) =>
+          (request) => handler(request);
 
       server.addMiddleware(middleware);
       expect(server.middlewares, isNotEmpty);
     });
 
     test('Calling addMiddlewares adds Middlewares to collection', () {
-      FutureOr<Response> Function(Request) middleware(handler) => (request) => handler(request);
+      FutureOr<Response> Function(Request) middleware(handler) =>
+          (request) => handler(request);
 
       server.addMiddlewares([middleware]);
       expect(server.middlewares, isNotEmpty);
