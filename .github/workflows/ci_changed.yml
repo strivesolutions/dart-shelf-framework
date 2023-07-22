@@ -16,7 +16,7 @@ jobs:
         run: |
           curl --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/labels \
-          --header 'Authorization: Bearer ${{ github.token }}' \
+          --header 'Authorization: Bearer ${{ secrets.STRIVEBOT_TOKEN }}' \
           --header 'Content-Type: application/json' \
           --data '{
             "labels": ["CI Change"]
