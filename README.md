@@ -38,7 +38,7 @@ To use this package in your project, in your `pubspec.yaml` file, add the follow
 
 ```yaml
 dependencies:
-  dart-shelf-framework:
+  dart_shelf_framework:
     git:
       url: https://github.com/strivesolutions/dart-shelf-framework.git
       ref: main
