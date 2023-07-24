@@ -78,6 +78,17 @@
 
 </dd>
 
+        <dt id="path" class="property">
+  <span class="name"><a href="../dart_shelf_framework/ApiRouteMixin/path.html">path</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.0.5/dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Path of the route
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
         <dt id="hashCode" class="property inherited">
   <span class="name"><a href="https://api.dart.dev/stable/3.0.5/dart-core/Object/hashCode.html">hashCode</a></span>
   <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.0.5/dart-core/int-class.html">int</a></span> 
@@ -150,20 +161,6 @@ with a status code of 409 Conflict
   Returns a <a href="https://pub.dev/documentation/shelf/1.4.1/shelf/Response-class.html">Response</a> with the <a href="../dart_shelf_framework/ApiResponseMixin-mixin.html">ApiResponseMixin</a> as body
 and the Content-Type header set to application/json
 with a status code of 403 Forbidden
-  
-
-</dd>
-
-        <dt id="getPath" class="callable">
-  <span class="name"><a href="../dart_shelf_framework/ApiRouteMixin/getPath.html">getPath</a></span><span class="signature">(<wbr><span class="parameter" id="getPath-param-prefix">{<span class="type-annotation"><a href="https://api.dart.dev/stable/3.0.5/dart-core/String-class.html">String</a></span> <span class="parameter-name">prefix</span> = <span class="default-value">&#39;&#39;</span>}</span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.0.5/dart-core/String-class.html">String</a></span>
-  </span>
-  
-
-</dt>
-<dd>
-  Path of the route
-If <code>prefix</code> is provided, it will be added to the path
   
 
 </dd>
@@ -386,6 +383,7 @@ with a status code of 401 Unauthorized
           <a href="../dart_shelf_framework/ApiRouteMixin-mixin.html#instance-properties">Properties</a>
         </li>
           <li class="inherited"><a href="https://api.dart.dev/stable/3.0.5/dart-core/Object/hashCode.html">hashCode</a></li>
+          <li><a href="../dart_shelf_framework/ApiRouteMixin/path.html">path</a></li>
           <li class="inherited"><a href="https://api.dart.dev/stable/3.0.5/dart-core/Object/runtimeType.html">runtimeType</a></li>
           <li><a href="../dart_shelf_framework/ApiRouteMixin/verb.html">verb</a></li>
 
@@ -393,7 +391,6 @@ with a status code of 401 Unauthorized
           <li><a href="../dart_shelf_framework/ApiRouteMixin/badRequest.html">badRequest</a></li>
           <li><a href="../dart_shelf_framework/ApiRouteMixin/conflict.html">conflict</a></li>
           <li><a href="../dart_shelf_framework/ApiRouteMixin/forbidden.html">forbidden</a></li>
-          <li><a href="../dart_shelf_framework/ApiRouteMixin/getPath.html">getPath</a></li>
           <li><a href="../dart_shelf_framework/ApiRouteMixin/handler.html">handler</a></li>
           <li><a href="../dart_shelf_framework/ApiRouteMixin/internalServerError.html">internalServerError</a></li>
           <li><a href="../dart_shelf_framework/ApiRouteMixin/movedPermanently.html">movedPermanently</a></li>
@@ -419,7 +416,7 @@ with a status code of 401 Unauthorized
 <footer>
   <span class="no-break">
     dart_shelf_framework
-      0.1.4
+      0.2.0
   </span>
 
   

@@ -8,7 +8,7 @@ import '../../data/example_data.dart';
 
 final class Create with ApiRouteMixin {
   @override
-  String getPath({String prefix = ''}) => prefix;
+  String get path => '';
 
   @override
   Future<Response> handler(Request request) async {
