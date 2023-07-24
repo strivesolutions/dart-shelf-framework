@@ -5,7 +5,7 @@ import 'package:shelf/src/response.dart';
 
 final class MockRoute with ApiRouteMixin {
   @override
-  String getPath({String? prefix}) => '${prefix ?? ''}/mock';
+  String get path => '/mock';
 
   @override
   Future<Response> handler(Request request) async {
