@@ -105,6 +105,14 @@
   Factory to create a Shelf <a href="https://pub.dev/documentation/shelf_router/1.1.4/shelf_router/Router-class.html">Router</a> from a list of <a href="../dart_shelf_framework/ApiMixin-mixin.html">ApiMixin</a> apis.
 </dd>
 
+        <dt id="Serializable">
+  <span class="name "><a href="../dart_shelf_framework/Serializable-class.html">Serializable</a></span> 
+
+</dt>
+<dd>
+  Interface for serializable classes.
+</dd>
+
         <dt id="ServerBuilder">
   <span class="name "><a href="../dart_shelf_framework/ServerBuilder-class.html">ServerBuilder</a></span> 
 
@@ -144,9 +152,40 @@
   Mixin for <a href="../dart_shelf_framework/ApiResponse-class.html">ApiResponse</a>
 </dd>
 
+        <dt id="ApiRouteMixin">
+  <span class="name "><a href="../dart_shelf_framework/ApiRouteMixin-mixin.html">ApiRouteMixin</a></span> 
+
+</dt>
+<dd>
+  Mixin for ApiRoute
+</dd>
+
+        <dt id="ServerMixin">
+  <span class="name "><a href="../dart_shelf_framework/ServerMixin-mixin.html">ServerMixin</a></span> 
+
+</dt>
+<dd>
+  Mixin for <a href="https://pub.dev/documentation/shelf/1.4.1/shelf/Server-class.html">Server</a>
+</dd>
+
       </dl>
     </section>
 
+    <section class="summary offset-anchor" id="extensions">
+      <h2>Extensions</h2>
+
+      <dl>
+        <dt id="SerializableListExtensions">
+    <span class="name "><a href="../dart_shelf_framework/SerializableListExtensions.html">SerializableListExtensions</a></span> 
+
+</dt>
+<dd>
+    Extension for <a href="../dart_shelf_framework/Serializable-class.html">Serializable</a>
+</dd>
+
+
+      </dl>
+    </section>
 
 
 
@@ -201,6 +240,48 @@ See <a href="https://tools.ietf.org/html/rfc7231#section-4.3">RFC 7231</a>.
 </dd>
 
 
+          
+  <dt id="Logger" class="callable">
+    <span class="name"><a href="../dart_shelf_framework/Logger.html">Logger</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-message"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.0.5/dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="param-isError"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.0.5/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isError</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    
+    
+
+  </dd>
+
+          
+  <dt id="Middleware" class="callable">
+    <span class="name"><a href="../dart_shelf_framework/Middleware.html">Middleware</a></span><span class="signature">
+      <span class="returntype parameter">= <a href="https://api.dart.dev/stable/3.0.5/dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/shelf/1.4.1/shelf/Response-class.html">Response</a></span>&gt;</span> Function<span class="signature">(<span class="parameter" id="param-"><span class="type-annotation"><a href="https://pub.dev/documentation/shelf/1.4.1/shelf/Request-class.html">Request</a></span></span>)</span> Function<span class="signature">(<span class="parameter" id="param-"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.0.5/dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/shelf/1.4.1/shelf/Response-class.html">Response</a></span>&gt;</span></span> <span class="parameter-name"></span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="https://pub.dev/documentation/shelf/1.4.1/shelf/Request-class.html">Request</a></span></span>)</span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Type definitions for the server.
+    
+
+  </dd>
+
+          
+  <dt id="RequestHandler" class="callable">
+    <span class="name"><a href="../dart_shelf_framework/RequestHandler.html">RequestHandler</a></span><span class="signature">
+      <span class="returntype parameter">= <a href="https://api.dart.dev/stable/3.0.5/dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/shelf/1.4.1/shelf/Response-class.html">Response</a></span>&gt;</span> Function<span class="signature">(<span class="parameter" id="param-"><span class="type-annotation"><a href="https://pub.dev/documentation/shelf/1.4.1/shelf/Request-class.html">Request</a></span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    
+    
+
+  </dd>
+
       </dl>
     </section>
 
@@ -236,13 +317,18 @@ See <a href="https://tools.ietf.org/html/rfc7231#section-4.3">RFC 7231</a>.
         <li><a href="../dart_shelf_framework/ApiResponse-class.html">ApiResponse</a></li>
         <li><a href="../dart_shelf_framework/CorsConfig-class.html">CorsConfig</a></li>
         <li><a href="../dart_shelf_framework/RouterFactory-class.html">RouterFactory</a></li>
+        <li><a href="../dart_shelf_framework/Serializable-class.html">Serializable</a></li>
         <li><a href="../dart_shelf_framework/ServerBuilder-class.html">ServerBuilder</a></li>
 
+      <li class="section-title"><a href="../dart_shelf_framework/dart_shelf_framework-library.html#extensions">Extensions</a></li>
+        <li><a href="../dart_shelf_framework/SerializableListExtensions.html">SerializableListExtensions</a></li>
 
       <li class="section-title"><a href="../dart_shelf_framework/dart_shelf_framework-library.html#mixins">Mixins</a></li>
         <li><a href="../dart_shelf_framework/ApiErrorMixin-mixin.html">ApiErrorMixin</a></li>
         <li><a href="../dart_shelf_framework/ApiMixin-mixin.html">ApiMixin</a></li>
         <li><a href="../dart_shelf_framework/ApiResponseMixin-mixin.html">ApiResponseMixin</a></li>
+        <li><a href="../dart_shelf_framework/ApiRouteMixin-mixin.html">ApiRouteMixin</a></li>
+        <li><a href="../dart_shelf_framework/ServerMixin-mixin.html">ServerMixin</a></li>
 
 
 
@@ -253,6 +339,9 @@ See <a href="https://tools.ietf.org/html/rfc7231#section-4.3">RFC 7231</a>.
       <li class="section-title"><a href="../dart_shelf_framework/dart_shelf_framework-library.html#typedefs">Typedefs</a></li>
         <li><a href="../dart_shelf_framework/Json.html">Json</a></li>
         <li><a href="../dart_shelf_framework/JsonList.html">JsonList</a></li>
+        <li><a href="../dart_shelf_framework/Logger.html">Logger</a></li>
+        <li><a href="../dart_shelf_framework/Middleware.html">Middleware</a></li>
+        <li><a href="../dart_shelf_framework/RequestHandler.html">RequestHandler</a></li>
 
 </ol>
 
@@ -263,7 +352,7 @@ See <a href="https://tools.ietf.org/html/rfc7231#section-4.3">RFC 7231</a>.
 <footer>
   <span class="no-break">
     dart_shelf_framework
-      0.1.3
+      0.1.4
   </span>
 
   
