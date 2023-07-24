@@ -6,7 +6,7 @@ import 'package:shelf/src/response.dart';
 /// This is an example of how to issue a 400 Bad Request response.
 final class BadRequest with ApiRouteMixin {
   @override
-  String getPath({String prefix = ''}) => '$prefix/bad-request';
+  String get path => '/bad-request';
 
   @override
   Future<Response> handler(Request request) async {

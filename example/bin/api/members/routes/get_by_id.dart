@@ -6,7 +6,7 @@ import '../../data/example_data.dart';
 
 final class GetById with ApiRouteMixin {
   @override
-  String getPath({String prefix = ''}) => '$prefix/<id>';
+  String get path => '/<id>';
 
   @override
   Future<Response> handler(Request request) async {
