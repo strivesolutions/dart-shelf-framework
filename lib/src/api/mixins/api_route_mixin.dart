@@ -7,7 +7,7 @@ import 'package:shelf/shelf.dart';
 
 import '../http_method.dart';
 
-/// Mixin for [ApiRoute]
+/// Mixin for ApiRoute
 mixin ApiRouteMixin {
   /// HTTP Verb
   HttpMethod get verb;
@@ -20,15 +20,15 @@ mixin ApiRouteMixin {
   Future<Response> handler(Request request);
 
   /// Returns a [Response] with the [ApiResponseMixin] as body
-  /// and the [Content-Type] header set to [application/json]
-  /// with a status code of [200 OK]
+  /// and the Content-Type header set to application/json
+  /// with a status code of 200 OK
   Response ok(ApiResponseMixin response) =>
       Response.ok(jsonEncode(response.toJson()),
           headers: {'Content-Type': 'application/json'});
 
   /// Returns a [Response] with the [ApiResponseMixin] as body
-  /// and the [Content-Type] header set to [application/json]
-  /// with a status code of [500 Internal Server Error]
+  /// and the Content-Type header set to application/json
+  /// with a status code of 500 Internal Server Error
   Response internalServerError(ApiResponseMixin data) {
     return Response.internalServerError(
       body: jsonEncode(jsonEncode(data.toJson())),
@@ -37,8 +37,8 @@ mixin ApiRouteMixin {
   }
 
   /// Returns a [Response] with the [ApiResponseMixin] as body
-  /// and the [Content-Type] header set to [application/json]
-  /// with a status code of [404 Not Found]
+  /// and the Content-Type header set to application/json
+  /// with a status code of 404 Not Found
   Response notFound({ApiResponseMixin? data}) {
     return Response.notFound(
       jsonEncode(
@@ -55,8 +55,8 @@ mixin ApiRouteMixin {
   }
 
   /// Returns a [Response] with the [ApiResponseMixin] as body
-  /// and the [Content-Type] header set to [application/json]
-  /// with a status code of [400 Bad Request]
+  /// and the Content-Type header set to application/json
+  /// with a status code of 400 Bad Request
   Response badRequest({ApiResponseMixin? data}) {
     return Response.badRequest(
       body: jsonEncode(data?.toJson() ??
@@ -71,8 +71,8 @@ mixin ApiRouteMixin {
   }
 
   /// Returns a [Response] with the [ApiResponseMixin] as body
-  /// and the [Content-Type] header set to [application/json]
-  /// with a status code of [403 Forbidden]
+  /// and the Content-Type header set to application/json
+  /// with a status code of 403 Forbidden
   Response forbidden({ApiResponseMixin? data}) {
     return Response.forbidden(
       jsonEncode(data?.toJson() ??
@@ -87,8 +87,8 @@ mixin ApiRouteMixin {
   }
 
   /// Returns a [Response] with the [ApiResponseMixin] as body
-  /// and the [Content-Type] header set to [application/json]
-  /// with a status code of [401 Unauthorized]
+  /// and the Content-Type header set to application/json
+  /// with a status code of 401 Unauthorized
   Response unauthorized({ApiResponseMixin? data}) {
     return Response.unauthorized(
       jsonEncode(data?.toJson() ??
@@ -103,8 +103,8 @@ mixin ApiRouteMixin {
   }
 
   /// Returns a [Response] with the [ApiResponseMixin] as body
-  /// and the [Content-Type] header set to [application/json]
-  /// with a status code of [409 Conflict]
+  /// and the Content-Type header set to application/json
+  /// with a status code of 409 Conflict
   Response conflict({ApiResponseMixin? data}) {
     return Response(HttpStatus.conflict,
         body: jsonEncode(data?.toJson() ??
@@ -118,8 +118,8 @@ mixin ApiRouteMixin {
   }
 
   /// Returns a [Response] with the [ApiResponseMixin] as body
-  /// and the [Content-Type] header set to [application/json]
-  /// with a status code of [303 See Other]
+  /// and the Content-Type header set to application/json
+  /// with a status code of 303 See Other
   Response seeOther(String location, {ApiResponseMixin? data}) {
     return Response.seeOther(location,
         body: jsonEncode(data?.toJson() ??
@@ -133,8 +133,8 @@ mixin ApiRouteMixin {
   }
 
   /// Returns a [Response] with the [ApiResponseMixin] as body
-  /// and the [Content-Type] header set to [application/json]
-  /// with a status code of [301 Moved Permanently]
+  /// and the Content-Type header set to application/json
+  /// with a status code of 301 Moved Permanently
   Response movedPermanently(String location, {ApiResponseMixin? data}) {
     return Response.movedPermanently(location,
         body: jsonEncode(data?.toJson() ??

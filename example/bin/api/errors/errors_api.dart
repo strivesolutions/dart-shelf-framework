@@ -1,5 +1,4 @@
 import 'package:dart_shelf_framework/dart_shelf_framework.dart';
-import 'package:dart_shelf_framework/src/api/mixins/api_route_mixin.dart';
 
 import 'bad_request.dart';
 

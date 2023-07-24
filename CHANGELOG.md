@@ -1,3 +1,7 @@
+## 0.1.4
+
+- Fix for missing library exports
+
 ## 0.1.3
 
 - Fix Getting Started section in ReadMe. Provided incorrect instructions for adding the dependency to a project.

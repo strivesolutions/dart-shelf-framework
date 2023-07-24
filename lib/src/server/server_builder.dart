@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:dart_shelf_framework/dart_shelf_framework.dart';
-import 'package:dart_shelf_framework/src/server/type_definitions.dart';
 import 'package:shelf/shelf.dart' as shelf;
 import 'package:shelf/shelf_io.dart';
 
