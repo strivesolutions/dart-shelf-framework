@@ -13,11 +13,7 @@ void main() {
     });
 
     test('Calling getPath returns path', () {
-      expect(route.getPath(), equals('/mock'));
-    });
-
-    test('Calling getPath with prefix returns path with prefix', () {
-      expect(route.getPath(prefix: '/api'), equals('/api/mock'));
+      expect(route.path, equals('/mock'));
     });
 
     test('Response ok returns 200', () {

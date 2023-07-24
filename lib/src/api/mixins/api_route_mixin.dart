@@ -13,8 +13,7 @@ mixin ApiRouteMixin {
   HttpMethod get verb;
 
   /// Path of the route
-  /// If [prefix] is provided, it will be added to the path
-  String getPath({String prefix = ''});
+  String get path;
 
   /// Handler of the route
   Future<Response> handler(Request request);
@@ -45,7 +44,7 @@ mixin ApiRouteMixin {
         jsonEncode(data?.toJson() ??
             ApiError(
               message: 'NOT FOUND',
-              path: getPath(),
+              path: path,
               statusCode: HttpStatus.notFound,
               detail: 'NOT FOUND',
             ).toJson()),
@@ -62,7 +61,7 @@ mixin ApiRouteMixin {
       body: jsonEncode(data?.toJson() ??
           ApiError(
             message: 'BAD REQUEST',
-            path: getPath(),
+            path: path,
             statusCode: HttpStatus.badRequest,
             detail: 'BAD REQUEST',
           ).toJson()),
@@ -78,7 +77,7 @@ mixin ApiRouteMixin {
       jsonEncode(data?.toJson() ??
           ApiError(
             message: 'FORBIDDEN',
-            path: getPath(),
+            path: path,
             statusCode: HttpStatus.forbidden,
             detail: 'FORBIDDEN',
           ).toJson()),
@@ -94,7 +93,7 @@ mixin ApiRouteMixin {
       jsonEncode(data?.toJson() ??
           ApiError(
             message: 'UNAUTHORIZED',
-            path: getPath(),
+            path: path,
             statusCode: HttpStatus.unauthorized,
             detail: 'UNAUTHORIZED',
           ).toJson()),
@@ -110,7 +109,7 @@ mixin ApiRouteMixin {
         body: jsonEncode(data?.toJson() ??
             ApiError(
               message: 'CONFLICT',
-              path: getPath(),
+              path: path,
               statusCode: HttpStatus.conflict,
               detail: 'CONFLICT',
             ).toJson()),
@@ -125,7 +124,7 @@ mixin ApiRouteMixin {
         body: jsonEncode(data?.toJson() ??
             ApiError(
               message: 'SEE OTHER (REDIRECT)',
-              path: getPath(),
+              path: path,
               statusCode: HttpStatus.seeOther,
               detail: 'New Location: $location',
             ).toJson()),
@@ -140,7 +139,7 @@ mixin ApiRouteMixin {
         body: jsonEncode(data?.toJson() ??
             ApiError(
               message: 'MOVED PERMANENTLY (REDIRECT)',
-              path: getPath(),
+              path: path,
               statusCode: HttpStatus.movedPermanently,
               detail: 'New Location: $location',
             ).toJson()),
