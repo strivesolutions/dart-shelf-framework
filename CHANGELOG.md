@@ -1,3 +1,8 @@
+## 0.2.0
+
+- **BREAKING CHANGE** - Changed how the `path` field is implemented when using `ApiRouteMixin`;
+  - This was to simplify implementing new routes and to reduce duplication of code.
+
 ## 0.1.4
 
 - Fix for missing library exports
