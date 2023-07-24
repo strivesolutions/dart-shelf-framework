@@ -1,6 +1,4 @@
 import 'package:dart_shelf_framework/dart_shelf_framework.dart';
-import 'package:dart_shelf_framework/src/api/mixins/api_route_mixin.dart';
-import 'package:dart_shelf_framework/src/serialization/serialization_extensions.dart';
 import 'package:shelf/src/request.dart';
 import 'package:shelf/src/response.dart';
 import '../../data/example_data.dart';
