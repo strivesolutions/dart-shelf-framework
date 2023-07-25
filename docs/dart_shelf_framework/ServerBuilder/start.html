@@ -75,7 +75,7 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">Future&lt;HttpServer&gt; start() async {
-  final router = RouterFactory.create(apis);
+  final router = RouterFactory.create(apis, routerBasePath: basePath);
   final pipeline = _configurePipelineMiddleware(middlewares, logger);
   final requestHandler = pipeline.addHandler(router);
   final server = await serve(requestHandler, address, port);
@@ -121,6 +121,7 @@
           <li><a href="../../dart_shelf_framework/ServerBuilder/address.html">address</a></li>
           <li><a href="../../dart_shelf_framework/ServerBuilder/apis.html">apis</a></li>
           <li><a href="../../dart_shelf_framework/ServerBuilder/autoCompressContent.html">autoCompressContent</a></li>
+          <li><a href="../../dart_shelf_framework/ServerBuilder/basePath.html">basePath</a></li>
           <li class="inherited"><a href="https://api.dart.dev/stable/3.0.5/dart-core/Object/hashCode.html">hashCode</a></li>
           <li><a href="../../dart_shelf_framework/ServerBuilder/logger.html">logger</a></li>
           <li><a href="../../dart_shelf_framework/ServerBuilder/middlewares.html">middlewares</a></li>
@@ -157,7 +158,7 @@
 <footer>
   <span class="no-break">
     dart_shelf_framework
-      0.2.0
+      0.2.1
   </span>
 
   

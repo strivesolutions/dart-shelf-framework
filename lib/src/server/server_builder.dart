@@ -10,10 +10,15 @@ final class ServerBuilder {
   final InternetAddress address;
   final List<Middleware> middlewares = [];
   final List<ApiMixin> apis = [];
+  final String basePath;
   bool autoCompressContent = false;
   Logger? logger;
 
-  ServerBuilder({required this.port, required this.address});
+  ServerBuilder({
+    required this.port,
+    required this.address,
+    this.basePath = '',
+  });
 
   /// Adds a request logger to the server.
   /// Prints the time of the request, the elapsed time for the inner handlers,
@@ -62,7 +67,7 @@ final class ServerBuilder {
 
   /// Starts the server.
   Future<HttpServer> start() async {
-    final router = RouterFactory.create(apis);
+    final router = RouterFactory.create(apis, routerBasePath: basePath);
     final pipeline = _configurePipelineMiddleware(middlewares, logger);
     final requestHandler = pipeline.addHandler(router);
     final server = await serve(requestHandler, address, port);
