@@ -59,7 +59,8 @@
     <section class="multi-line-signature">
       
       <span class="name ">ServerBuilder</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="-param-port">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.0.5/dart-core/int-class.html">int</a></span> <span class="parameter-name">port</span>, </span></li>
-<li><span class="parameter" id="-param-address"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.0.5/dart-io/InternetAddress-class.html">InternetAddress</a></span> <span class="parameter-name">address</span>}</span></li>
+<li><span class="parameter" id="-param-address"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.0.5/dart-io/InternetAddress-class.html">InternetAddress</a></span> <span class="parameter-name">address</span>, </span></li>
+<li><span class="parameter" id="-param-basePath"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.0.5/dart-core/String-class.html">String</a></span> <span class="parameter-name">basePath</span> = <span class="default-value">&#39;&#39;</span>}</span></li>
 </ol>)
     </section>
 
@@ -69,7 +70,11 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">ServerBuilder({required this.port, required this.address});</code></pre>
+  <pre class="language-dart"><code class="language-dart">ServerBuilder({
+  required this.port,
+  required this.address,
+  this.basePath = &#39;&#39;,
+});</code></pre>
 </section>
 
 
@@ -103,6 +108,7 @@
           <li><a href="../../dart_shelf_framework/ServerBuilder/address.html">address</a></li>
           <li><a href="../../dart_shelf_framework/ServerBuilder/apis.html">apis</a></li>
           <li><a href="../../dart_shelf_framework/ServerBuilder/autoCompressContent.html">autoCompressContent</a></li>
+          <li><a href="../../dart_shelf_framework/ServerBuilder/basePath.html">basePath</a></li>
           <li class="inherited"><a href="https://api.dart.dev/stable/3.0.5/dart-core/Object/hashCode.html">hashCode</a></li>
           <li><a href="../../dart_shelf_framework/ServerBuilder/logger.html">logger</a></li>
           <li><a href="../../dart_shelf_framework/ServerBuilder/middlewares.html">middlewares</a></li>
@@ -139,7 +145,7 @@
 <footer>
   <span class="no-break">
     dart_shelf_framework
-      0.2.0
+      0.2.1
   </span>
 
   
