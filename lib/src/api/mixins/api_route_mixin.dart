@@ -30,7 +30,7 @@ mixin ApiRouteMixin {
   /// with a status code of 500 Internal Server Error
   Response internalServerError(ApiResponseMixin data) {
     return Response.internalServerError(
-      body: jsonEncode(jsonEncode(data.toJson())),
+      body: jsonEncode(data.toJson()),
       headers: {'Content-Type': 'application/json'},
     );
   }
@@ -40,15 +40,13 @@ mixin ApiRouteMixin {
   /// with a status code of 404 Not Found
   Response notFound({ApiResponseMixin? data}) {
     return Response.notFound(
-      jsonEncode(
-        jsonEncode(data?.toJson() ??
-            ApiError(
-              message: 'NOT FOUND',
-              path: path,
-              statusCode: HttpStatus.notFound,
-              detail: 'NOT FOUND',
-            ).toJson()),
-      ),
+      jsonEncode(data?.toJson() ??
+          ApiError(
+            message: 'NOT FOUND',
+            path: path,
+            statusCode: HttpStatus.notFound,
+            detail: 'NOT FOUND',
+          ).toJson()),
       headers: {'Content-Type': 'application/json'},
     );
   }
