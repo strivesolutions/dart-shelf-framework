@@ -1,3 +1,7 @@
+## 0.2.5
+
+- Added new ServerBuilder option to completely disable request logging. This is useful if you want full control of the logging middleware. You can then add your own logging middleware to the pipeline by calling `addMiddleware` on the `ServerBuilder` instance.
+
 ## 0.2.4
 
 - Add option to only import specific parts/features of this library. Such as only importing api related features, or only importing server related features. Left the option to import everything as well. This was to reduce the chances that types in this library would conflict with other libraries that may be used in a project.
