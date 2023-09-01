@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dart_shelf_framework/dart_shelf_framework.dart';
 import 'package:shelf/shelf.dart' as shelf;
+import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart';
 
 /// Fluent API for building a server.

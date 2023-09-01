@@ -1,4 +1,4 @@
-import 'package:dart_shelf_framework/src/server/type_definitions.dart';
+import 'package:shelf/shelf.dart';
 import 'package:shelf_cors_headers/shelf_cors_headers.dart';
 
 /// Configuration for CORS Middleware
