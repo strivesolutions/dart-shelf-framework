@@ -13,6 +13,7 @@ final class ServerBuilder {
   final List<ApiMixin> apis = [];
   final String basePath;
   bool autoCompressContent = false;
+  bool useDefaultLogger = true;
   Logger? logger;
 
   ServerBuilder({
@@ -66,6 +67,14 @@ final class ServerBuilder {
     return this;
   }
 
+  /// Disables the default logger for the server.
+  /// Useful if you want to use a custom logger.
+  /// This setting is ignored if [addRequestLogger] is called.
+  ServerBuilder disableDefaultLogger() {
+    useDefaultLogger = false;
+    return this;
+  }
+
   /// Starts the server.
   Future<HttpServer> start() async {
     final router = RouterFactory.create(apis, routerBasePath: basePath);
@@ -90,7 +99,9 @@ final class ServerBuilder {
       pipeline = pipeline.addMiddleware(middleware);
     }
 
-    pipeline = pipeline.addMiddleware(shelf.logRequests(logger: logger));
+    if (useDefaultLogger || logger != null) {
+      pipeline = pipeline.addMiddleware(shelf.logRequests(logger: logger));
+    }
 
     return pipeline;
   }
