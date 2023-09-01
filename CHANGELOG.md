@@ -1,3 +1,7 @@
+## 0.2.2
+
+- Fix for middleware not being properly added to the pipeline
+
 ## 0.2.1
 
 - Fix for not being able to set a path prefix for each route. (ie) /api/v1
