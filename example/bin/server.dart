@@ -4,6 +4,7 @@ import 'package:dart_shelf_framework/dart_shelf_framework.dart';
 
 import 'api/errors/bad_request.dart';
 import 'api/errors/errors_api.dart';
+import 'api/errors/not_found_request.dart';
 import 'api/logs/request_logger.dart';
 import 'api/members/members_api.dart';
 import 'api/members/routes/create.dart';
@@ -24,7 +25,7 @@ void main(List<String> args) async {
       Create(),
       GetById(),
     ),
-    ErrorsApi(BadRequest())
+    ErrorsApi(BadRequest(), NotFoundRequest())
   ];
 
   // Optional Cors Configuration.
