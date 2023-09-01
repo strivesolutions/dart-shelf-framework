@@ -83,13 +83,13 @@ final class ServerBuilder {
 
   shelf.Pipeline _configurePipelineMiddleware(
       List<Middleware> middlewares, Logger? logger) {
-    final pipeline = shelf.Pipeline();
+    shelf.Pipeline pipeline = shelf.Pipeline();
 
     for (final middleware in middlewares) {
-      pipeline.addMiddleware(middleware);
+      pipeline = pipeline.addMiddleware(middleware);
     }
 
-    pipeline.addMiddleware(shelf.logRequests(logger: logger));
+    pipeline = pipeline.addMiddleware(shelf.logRequests(logger: logger));
 
     return pipeline;
   }
