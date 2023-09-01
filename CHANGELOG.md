@@ -1,3 +1,7 @@
+## 0.2.4
+
+- Add option to only import specific parts/features of this library. Such as only importing api related features, or only importing server related features. Left the option to import everything as well. This was to reduce the chances that types in this library would conflict with other libraries that may be used in a project.
+
 ## 0.2.3
 
 - Fix for double serialization on some error responses. Resulted in invalid JSON being returned.
