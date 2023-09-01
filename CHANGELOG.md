@@ -1,3 +1,7 @@
+## 0.2.3
+
+- Fix for double serialization on some error responses. Resulted in invalid JSON being returned.
+
 ## 0.2.2
 
 - Fix for middleware not being properly added to the pipeline
